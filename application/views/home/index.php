@@ -1,6 +1,8 @@
 <header class="container-fluid grey1 navbar">
     <h4> <i class="fas fa-paw"></i> SIMBA </h4>
-    <h4 class="btn btn-2">UPLOAD LOMBA</h4>
+    <a href="<?= base_url('upload'); ?>">
+        <h4 class="btn btn-2">UPLOAD LOMBA</h4>
+    </a>
 </header>
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
@@ -51,54 +53,18 @@
         </div>
 
         <div class="col-lg-9 col-md-12 col-sm-12 text-center">
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url() ?>/assets/img/ex2.jpg" class="card-img-top" alt="gambar2">
-                <div class="card-body">
-                    <h5 class="card-title">Judul Lomba</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus aspernatur distinctio consequuntur veritatis quibusdam quidem id reprehenderit expedita voluptate.</p>
-                    <a href="lomba.html" class="btn btn-1">Detail lomba</a>
+            <?php foreach ($lomba as $l) : ?>
+                <div class="card" style="width: 18rem;">
+                    <a href="<?= base_url('lomba/detail/') ?><?= $l['id_lomba'] ?>">
+                        <img src="<?= base_url() ?>/assets/img/lomba/<?= $l['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $l['judul_lomba'] ?></h5>
+                        <p class="card-text"><?= $l['deskripsi'] ?></p>
+                        <a href="<?= base_url('lomba/detail/') ?><?= $l['id_lomba'] ?>" class="btn btn-1">Detail lomba</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url() ?>/assets/img/ex2.jpg" class="card-img-top" alt="gambar2">
-                <div class="card-body">
-                    <h5 class="card-title">Judul Lomba</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus aspernatur distinctio consequuntur veritatis quibusdam quidem id reprehenderit expedita voluptate.</p>
-                    <a href="#" class="btn btn-1">Detail lomba</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url() ?>/assets/img/ex2.jpg" class="card-img-top" alt="gambar2">
-                <div class="card-body">
-                    <h5 class="card-title">Judul Lomba</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus aspernatur distinctio consequuntur veritatis quibusdam quidem id reprehenderit expedita voluptate.</p>
-                    <a href="#" class="btn btn-1">Detail lomba</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url() ?>/assets/img/ex2.jpg" class="card-img-top" alt="gambar2">
-                <div class="card-body">
-                    <h5 class="card-title">Judul Lomba</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus aspernatur distinctio consequuntur veritatis quibusdam quidem id reprehenderit expedita voluptate.</p>
-                    <a href="#" class="btn btn-1">Detail lomba</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url() ?>/assets/img/ex2.jpg" class="card-img-top" alt="gambar2">
-                <div class="card-body">
-                    <h5 class="card-title">Judul Lomba</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus aspernatur distinctio consequuntur veritatis quibusdam quidem id reprehenderit expedita voluptate.</p>
-                    <a href="#" class="btn btn-1">Detail lomba</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url() ?>/assets/img/ex2.jpg" class="card-img-top" alt="gambar2">
-                <div class="card-body">
-                    <h5 class="card-title">Judul Lomba</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus aspernatur distinctio consequuntur veritatis quibusdam quidem id reprehenderit expedita voluptate.</p>
-                    <button href="#" class="btn btn-1">Detail lomba</button>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

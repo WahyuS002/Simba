@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,9 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="<?= base_url() ?>/assets/vendor/fontawesome-free/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0e86436e00.js" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
+    <title><?= $title; ?></title>
 </head>
 
 <body>
