@@ -1,6 +1,6 @@
 <header class="container-fluid grey1 navbar">
     <h4> <i class="fas fa-paw"></i> SIMBA </h4>
-    <a href="<?= base_url('upload'); ?>">
+    <a href="<?= base_url('auth'); ?>">
         <h4 class="btn btn-2">UPLOAD LOMBA</h4>
     </a>
 </header>
