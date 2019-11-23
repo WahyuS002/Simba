@@ -1,1123 +1,954 @@
-<div class="wrapper">
-    <header class="header-top" header-theme="light">
-        <div class="container-fluid">
-            <div class="d-flex justify-content-between">
-                <div class="top-menu d-flex align-items-center">
-                    <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
-                    <div class="header-search">
-                        <div class="input-group">
-                            <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
-                            <input type="text" class="form-control">
-                            <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
-                        </div>
-                    </div>
-                    <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
-                </div>
-                <div class="top-menu d-flex align-items-center">
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-bell"></i><span class="badge bg-danger">3</span></a>
-                        <div class="dropdown-menu dropdown-menu-right notification-dropdown" aria-labelledby="notiDropdown">
-                            <h4 class="header">Notifications</h4>
-                            <div class="notifications-wrap">
-                                <a href="#" class="media">
-                                    <span class="d-flex">
-                                        <i class="ik ik-check"></i>
-                                    </span>
-                                    <span class="media-body">
-                                        <span class="heading-font-family media-heading">Invitation accepted</span>
-                                        <span class="media-content">Your have been Invited ...</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="media">
-                                    <span class="d-flex">
-                                        <img src="img/users/1.jpg" class="rounded-circle" alt="">
-                                    </span>
-                                    <span class="media-body">
-                                        <span class="heading-font-family media-heading">Steve Smith</span>
-                                        <span class="media-content">I slowly updated projects</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="media">
-                                    <span class="d-flex">
-                                        <i class="ik ik-calendar"></i>
-                                    </span>
-                                    <span class="media-body">
-                                        <span class="heading-font-family media-heading">To Do</span>
-                                        <span class="media-content">Meeting with Nathan on Friday 8 AM ...</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="footer"><a href="javascript:void(0);">See all activity</a></div>
-                        </div>
-                    </div>
-                    <button type="button" class="nav-link ml-10 right-sidebar-toggle"><i class="ik ik-message-square"></i><span class="badge bg-success">3</span></button>
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-plus"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right menu-grid" aria-labelledby="menuDropdown">
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Dashboard"><i class="ik ik-bar-chart-2"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Message"><i class="ik ik-mail"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Accounts"><i class="ik ik-users"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Sales"><i class="ik ik-shopping-cart"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Purchase"><i class="ik ik-briefcase"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Pages"><i class="ik ik-clipboard"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Chats"><i class="ik ik-message-square"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Contacts"><i class="ik ik-map-pin"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Blocks"><i class="ik ik-inbox"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Events"><i class="ik ik-calendar"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Notifications"><i class="ik ik-bell"></i></a>
-                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="More"><i class="ik ik-more-horizontal"></i></a>
-                        </div>
-                    </div>
-                    <button type="button" class="nav-link ml-10" id="apps_modal_btn" data-toggle="modal" data-target="#appsModal"><i class="ik ik-grid"></i></button>
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.jpg" alt=""></a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="profile.html"><i class="ik ik-user dropdown-icon"></i> Profile</a>
-                            <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
-                            <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Inbox</a>
-                            <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
-                            <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
-                        </div>
-                    </div>
+<!--*******************
+        Preloader start
+    ********************-->
+<div id="preloader">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+        </svg>
+    </div>
+</div>
+<!--*******************
+        Preloader end
+    ********************-->
 
-                </div>
-            </div>
+
+<!--**********************************
+        Main wrapper start
+    ***********************************-->
+<div id="main-wrapper">
+
+    <!--**********************************
+            Nav header start
+        ***********************************-->
+    <div class="nav-header">
+        <div class="brand-logo">
+            <a href="index.html">
+                <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+                <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                <span class="brand-title">
+                    <img src="images/logo-text.png" alt="">
+                </span>
+            </a>
         </div>
-    </header>
+    </div>
+    <!--**********************************
+            Nav header end
+        ***********************************-->
 
-    <div class="page-wrap">
-        <div class="app-sidebar colored">
-            <div class="sidebar-header">
-                <a class="header-brand" href="index.html">
-                    <div class="logo-img">
-                        <img src="<?= base_url('assets/dashboard/') ?>src/img/brand-white.svg" class="header-brand-img" alt="lavalite">
-                    </div>
-                    <span class="text">ThemeKit</span>
-                </a>
-                <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
-                <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
-            </div>
+    <!--**********************************
+            Header start
+        ***********************************-->
+    <div class="header">
+        <div class="header-content clearfix">
 
-            <div class="sidebar-content">
-                <div class="nav-container">
-                    <nav id="main-menu-navigation" class="navigation-main">
-                        <div class="nav-lavel">Navigation</div>
-                        <div class="nav-item active">
-                            <a href="index.html"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="pages/navbar.html"><i class="ik ik-menu"></i><span>Navigation</span> <span class="badge badge-success">New</span></a>
-                        </div>
-                        <div class="nav-item has-sub">
-                            <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Widgets</span> <span class="badge badge-danger">150+</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/widgets.html" class="menu-item">Basic</a>
-                                <a href="pages/widget-statistic.html" class="menu-item">Statistic</a>
-                                <a href="pages/widget-data.html" class="menu-item">Data</a>
-                                <a href="pages/widget-chart.html" class="menu-item">Chart Widget</a>
-                            </div>
-                        </div>
-                        <div class="nav-lavel">UI Element</div>
-                        <div class="nav-item has-sub">
-                            <a href="#"><i class="ik ik-box"></i><span>Basic</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/ui/alerts.html" class="menu-item">Alerts</a>
-                                <a href="pages/ui/badges.html" class="menu-item">Badges</a>
-                                <a href="pages/ui/buttons.html" class="menu-item">Buttons</a>
-                                <a href="pages/ui/navigation.html" class="menu-item">Navigation</a>
-                            </div>
-                        </div>
-                        <div class="nav-item has-sub">
-                            <a href="#"><i class="ik ik-gitlab"></i><span>Advance</span> <span class="badge badge-success">New</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/ui/modals.html" class="menu-item">Modals</a>
-                                <a href="pages/ui/notifications.html" class="menu-item">Notifications</a>
-                                <a href="pages/ui/carousel.html" class="menu-item">Slider</a>
-                                <a href="pages/ui/range-slider.html" class="menu-item">Range Slider</a>
-                                <a href="pages/ui/rating.html" class="menu-item">Rating</a>
-                            </div>
-                        </div>
-                        <div class="nav-item has-sub">
-                            <a href="#"><i class="ik ik-package"></i><span>Extra</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/ui/session-timeout.html" class="menu-item">Session Timeout</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="pages/ui/icons.html"><i class="ik ik-command"></i><span>Icons</span></a>
-                        </div>
-                        <div class="nav-lavel">Forms</div>
-                        <div class="nav-item has-sub">
-                            <a href="#"><i class="ik ik-edit"></i><span>Forms</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/form-components.html" class="menu-item">Components</a>
-                                <a href="pages/form-addon.html" class="menu-item">Add-On</a>
-                                <a href="pages/form-advance.html" class="menu-item">Advance</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="pages/form-picker.html"><i class="ik ik-terminal"></i><span>Form Picker</span> <span class="badge badge-success">New</span></a>
-                        </div>
-
-                        <div class="nav-lavel">Tables</div>
-                        <div class="nav-item">
-                            <a href="pages/table-bootstrap.html"><i class="ik ik-credit-card"></i><span>Bootstrap Table</span></a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="pages/table-datatable.html"><i class="ik ik-inbox"></i><span>Data Table</span></a>
-                        </div>
-
-                        <div class="nav-lavel">Charts</div>
-                        <div class="nav-item has-sub">
-                            <a href="#"><i class="ik ik-pie-chart"></i><span>Charts</span> <span class="badge badge-success">New</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/charts-chartist.html" class="menu-item active">Chartist</a>
-                                <a href="pages/charts-flot.html" class="menu-item">Flot</a>
-                                <a href="pages/charts-knob.html" class="menu-item">Knob</a>
-                                <a href="pages/charts-amcharts.html" class="menu-item">Amcharts</a>
-                            </div>
-                        </div>
-
-                        <div class="nav-lavel">Apps</div>
-                        <div class="nav-item">
-                            <a href="pages/calendar.html"><i class="ik ik-calendar"></i><span>Calendar</span></a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="pages/taskboard.html"><i class="ik ik-server"></i><span>Taskboard</span></a>
-                        </div>
-
-                        <div class="nav-lavel">Pages</div>
-
-                        <div class="nav-item has-sub">
-                            <a href="#"><i class="ik ik-lock"></i><span>Authentication</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/login.html" class="menu-item">Login</a>
-                                <a href="pages/register.html" class="menu-item">Register</a>
-                                <a href="pages/forgot-password.html" class="menu-item">Forgot Password</a>
-                            </div>
-                        </div>
-                        <div class="nav-item has-sub">
-                            <a href="#"><i class="ik ik-file-text"></i><span>Other</span></a>
-                            <div class="submenu-content">
-                                <a href="pages/profile.html" class="menu-item">Profile</a>
-                                <a href="pages/invoice.html" class="menu-item">Invoice</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="pages/layouts.html"><i class="ik ik-layout"></i><span>Layouts</span><span class="badge badge-success">New</span></a>
-                        </div>
-                        <div class="nav-lavel">Other</div>
-                        <div class="nav-item has-sub">
-                            <a href="javascript:void(0)"><i class="ik ik-list"></i><span>Menu Levels</span></a>
-                            <div class="submenu-content">
-                                <a href="javascript:void(0)" class="menu-item">Menu Level 2.1</a>
-                                <div class="nav-item has-sub">
-                                    <a href="javascript:void(0)" class="menu-item">Menu Level 2.2</a>
-                                    <div class="submenu-content">
-                                        <a href="javascript:void(0)" class="menu-item">Menu Level 3.1</a>
-                                    </div>
-                                </div>
-                                <a href="javascript:void(0)" class="menu-item">Menu Level 2.3</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="javascript:void(0)" class="disabled"><i class="ik ik-slash"></i><span>Disabled Menu</span></a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="javascript:void(0)"><i class="ik ik-award"></i><span>Sample Page</span></a>
-                        </div>
-                        <div class="nav-lavel">Support</div>
-                        <div class="nav-item">
-                            <a href="javascript:void(0)"><i class="ik ik-monitor"></i><span>Documentation</span></a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="javascript:void(0)"><i class="ik ik-help-circle"></i><span>Submit Issue</span></a>
-                        </div>
-                    </nav>
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="toggle-icon"><i class="icon-menu"></i></span>
                 </div>
             </div>
-        </div>
-        <div class="main-content">
-            <div class="container-fluid">
-                <div class="row clearfix">
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="state">
-                                        <h6>Bookmarks</h6>
-                                        <h2>1,410</h2>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ik ik-award"></i>
-                                    </div>
-                                </div>
-                                <small class="text-small mt-10 d-block">6% higher than last month</small>
-                            </div>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
-                            </div>
-                        </div>
+            <div class="header-left">
+                <div class="input-group icons">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="state">
-                                        <h6>Likes</h6>
-                                        <h2>41,410</h2>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ik ik-thumbs-up"></i>
-                                    </div>
-                                </div>
-                                <small class="text-small mt-10 d-block">61% higher than last month</small>
-                            </div>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="state">
-                                        <h6>Events</h6>
-                                        <h2>410</h2>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ik ik-calendar"></i>
-                                    </div>
-                                </div>
-                                <small class="text-small mt-10 d-block">Total Events</small>
-                            </div>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100" style="width: 31%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="state">
-                                        <h6>Comments</h6>
-                                        <h2>41,410</h2>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ik ik-message-square"></i>
-                                    </div>
-                                </div>
-                                <small class="text-small mt-10 d-block">Total Comments</small>
-                            </div>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
-                            </div>
-                        </div>
+                    <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
+                    <div class="drop-down animated flipInX d-md-none">
+                        <form action="#">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </form>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-8 col-md-12">
-                                        <h3 class="card-title">Visitors By Countries</h3>
-                                        <div id="visitfromworld" style="width:100%; height:350px"></div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-12">
-                                        <div class="row mb-15">
-                                            <div class="col-9">India</div>
-                                            <div class="col-3 text-right">28%</div>
-                                            <div class="col-12">
-                                                <div class="progress progress-sm mt-5">
-                                                    <div class="progress-bar bg-green" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-15">
-                                            <div class="col-9"> UK</div>
-                                            <div class="col-3 text-right">21%</div>
-                                            <div class="col-12">
-                                                <div class="progress progress-sm mt-5">
-                                                    <div class="progress-bar bg-aqua" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-15">
-                                            <div class="col-9"> USA</div>
-                                            <div class="col-3 text-right">18%</div>
-                                            <div class="col-12">
-                                                <div class="progress progress-sm mt-5">
-                                                    <div class="progress-bar bg-purple" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-9">China</div>
-                                            <div class="col-3 text-right">12%</div>
-                                            <div class="col-12">
-                                                <div class="progress progress-sm mt-5">
-                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            </div>
+            <div class="header-right">
+                <ul class="clearfix">
+                    <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                            <i class="mdi mdi-email-outline"></i>
+                            <span class="badge badge-pill gradient-1">3</span>
+                        </a>
+                        <div class="drop-down animated fadeIn dropdown-menu">
+                            <div class="dropdown-content-heading d-flex justify-content-between">
+                                <span class="">3 New Messages</span>
+                                <a href="javascript:void()" class="d-inline-block">
+                                    <span class="badge badge-pill gradient-1">3</span>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card" style="min-height: 422px;">
-                            <div class="card-header">
-                                <h3>Donut chart</h3>
-                            </div>
-                            <div class="card-body">
-                                <div id="c3-donut-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Recent Chat</h3>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="ik ik-chevron-left action-toggle"></i></li>
-                                        <li><i class="ik ik-minus minimize-card"></i></li>
-                                        <li><i class="ik ik-x close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body chat-box scrollable" style="height:300px;">
-                                <ul class="chat-list">
-                                    <li class="chat-item">
-                                        <div class="chat-img"><img src="img/users/1.jpg" alt="user"></div>
-                                        <div class="chat-content">
-                                            <h6 class="font-medium">James Anderson</h6>
-                                            <div class="box bg-light-info">Lorem Ipsum is simply dummy text of the printing &amp; type setting industry.</div>
-                                        </div>
-                                        <div class="chat-time">10:56 am</div>
+                            <div class="dropdown-content-body">
+                                <ul>
+                                    <li class="notification-unread">
+                                        <a href="javascript:void()">
+                                            <img class="float-left mr-3 avatar-img" src="images/avatar/1.jpg" alt="">
+                                            <div class="notification-content">
+                                                <div class="notification-heading">Saiful Islam</div>
+                                                <div class="notification-timestamp">08 Hours ago</div>
+                                                <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li class="chat-item">
-                                        <div class="chat-img"><img src="img/users/2.jpg" alt="user"></div>
-                                        <div class="chat-content">
-                                            <h6 class="font-medium">Bianca Doe</h6>
-                                            <div class="box bg-light-info">It’s Great opportunity to work.</div>
-                                        </div>
-                                        <div class="chat-time">10:57 am</div>
+                                    <li class="notification-unread">
+                                        <a href="javascript:void()">
+                                            <img class="float-left mr-3 avatar-img" src="images/avatar/2.jpg" alt="">
+                                            <div class="notification-content">
+                                                <div class="notification-heading">Adam Smith</div>
+                                                <div class="notification-timestamp">08 Hours ago</div>
+                                                <div class="notification-text">Can you do me a favour?</div>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li class="odd chat-item">
-                                        <div class="chat-content">
-                                            <div class="box bg-light-inverse">I would love to join the team.</div>
-                                            <br>
-                                        </div>
+                                    <li>
+                                        <a href="javascript:void()">
+                                            <img class="float-left mr-3 avatar-img" src="images/avatar/3.jpg" alt="">
+                                            <div class="notification-content">
+                                                <div class="notification-heading">Barak Obama</div>
+                                                <div class="notification-timestamp">08 Hours ago</div>
+                                                <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li class="odd chat-item">
-                                        <div class="chat-content">
-                                            <div class="box bg-light-inverse">Whats budget of the new project.</div>
-                                            <br>
-                                        </div>
-                                        <div class="chat-time">10:59 am</div>
-                                    </li>
-                                    <li class="chat-item">
-                                        <div class="chat-img"><img src="img/users/3.jpg" alt="user"></div>
-                                        <div class="chat-content">
-                                            <h6 class="font-medium">Angelina Rhodes</h6>
-                                            <div class="box bg-light-info">Well we have good budget for the project</div>
-                                        </div>
-                                        <div class="chat-time">11:00 am</div>
+                                    <li>
+                                        <a href="javascript:void()">
+                                            <img class="float-left mr-3 avatar-img" src="images/avatar/4.jpg" alt="">
+                                            <div class="notification-content">
+                                                <div class="notification-heading">Hilari Clinton</div>
+                                                <div class="notification-timestamp">08 Hours ago</div>
+                                                <div class="notification-text">Hello</div>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="card-footer chat-footer">
-                                <div class="input-wrap">
-                                    <input type="text" placeholder="Type and enter" class="form-control">
-                                </div>
-                                <button type="button" class="btn btn-icon btn-theme"><i class="fa fa-paper-plane"></i></button>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <h4 class="card-title">Weather Report</h4>
-                                    <select class="form-control w-25 ml-auto">
-                                        <option selected="">Today</option>
-                                        <option value="1">Weekly</option>
-                                    </select>
-                                </div>
-                                <div class="d-flex align-items-center flex-row mt-30">
-                                    <div class="p-2 f-50 text-info"><i class="wi wi-day-showers"></i> <span>23<sup>°</sup></span></div>
-                                    <div class="p-2">
-                                        <h3 class="mb-0">Saturday</h3><small>Banglore, India</small>
-                                    </div>
-                                </div>
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>Wind</td>
-                                            <td class="font-medium">ESE 17 mph</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Humidity</td>
-                                            <td class="font-medium">83%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pressure</td>
-                                            <td class="font-medium">28.56 in</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <hr>
-                                <ul class="list-unstyled row text-center city-weather-days mb-0 mt-20">
-                                    <li class="col"><i class="wi wi-day-sunny mr-5"></i><span>09:30</span>
-                                        <h3>20<sup>°</sup></h3>
-                                    </li>
-                                    <li class="col"><i class="wi wi-day-cloudy mr-5"></i><span>11:30</span>
-                                        <h3>22<sup>°</sup></h3>
-                                    </li>
-                                    <li class="col"><i class="wi wi-day-hail mr-5"></i><span>13:30</span>
-                                        <h3>25<sup>°</sup></h3>
-                                    </li>
-                                </ul>
+                    </li>
+                    <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                            <i class="mdi mdi-bell-outline"></i>
+                            <span class="badge badge-pill gradient-2">3</span>
+                        </a>
+                        <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
+                            <div class="dropdown-content-heading d-flex justify-content-between">
+                                <span class="">2 New Notifications</span>
+                                <a href="javascript:void()" class="d-inline-block">
+                                    <span class="badge badge-pill gradient-2">5</span>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card" style="min-height: 422px;">
-                            <div class="card-header">
-                                <h3>Timeline</h3>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="ik ik-chevron-left action-toggle"></i></li>
-                                        <li><i class="ik ik-minus minimize-card"></i></li>
-                                        <li><i class="ik ik-x close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body timeline">
-                                <div class="header bg-theme" style="background-image: url('img/placeholder/placeimg_400_200_nature.jpg')">
-                                    <div class="color-overlay d-flex align-items-center">
-                                        <div class="day-number">8</div>
-                                        <div class="date-right">
-                                            <div class="day-name">Monday</div>
-                                            <div class="month">February 2018</div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="dropdown-content-body">
                                 <ul>
                                     <li>
-                                        <div class="bullet bg-pink"></div>
-                                        <div class="time">11am</div>
-                                        <div class="desc">
-                                            <h3>Attendance</h3>
-                                            <h4>Computer Class</h4>
-                                        </div>
+                                        <a href="javascript:void()">
+                                            <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                            <div class="notification-content">
+                                                <h6 class="notification-heading">Events near you</h6>
+                                                <span class="notification-text">Within next 5 days</span>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="bullet bg-green"></div>
-                                        <div class="time">12pm</div>
-                                        <div class="desc">
-                                            <h3>Design Team</h3>
-                                            <h4>Hangouts</h4>
-                                        </div>
+                                        <a href="javascript:void()">
+                                            <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                            <div class="notification-content">
+                                                <h6 class="notification-heading">Event Started</h6>
+                                                <span class="notification-text">One hour ago</span>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="bullet bg-orange"></div>
-                                        <div class="time">2pm</div>
-                                        <div class="desc">
-                                            <h3>Finish</h3>
-                                            <h4>Go to Home</h4>
-                                        </div>
+                                        <a href="javascript:void()">
+                                            <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                            <div class="notification-content">
+                                                <h6 class="notification-heading">Event Ended Successfully</h6>
+                                                <span class="notification-text">One hour ago</span>
+                                            </div>
+                                        </a>
                                     </li>
+                                    <li>
+                                        <a href="javascript:void()">
+                                            <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                            <div class="notification-content">
+                                                <h6 class="notification-heading">Events to Join</h6>
+                                                <span class="notification-text">After two days</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="icons dropdown d-none d-md-flex">
+                        <a href="javascript:void(0)" class="log-user" data-toggle="dropdown">
+                            <span>English</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                        </a>
+                        <div class="drop-down dropdown-language animated fadeIn  dropdown-menu">
+                            <div class="dropdown-content-body">
+                                <ul>
+                                    <li><a href="javascript:void()">English</a></li>
+                                    <li><a href="javascript:void()">Dutch</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li class="icons dropdown">
+                        <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                            <span class="activity active"></span>
+                            <img src="images/user/1.png" height="40" width="40" alt="">
+                        </div>
+                        <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                            <div class="dropdown-content-body">
+                                <ul>
+                                    <li>
+                                        <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void()">
+                                            <i class="icon-envelope-open"></i> <span>Inbox</span>
+                                            <div class="badge gradient-3 badge-pill gradient-1">3</div>
+                                        </a>
+                                    </li>
 
-
-                <div class="card">
-                    <div class="card-header row">
-                        <div class="col col-sm-3">
-                            <div class="dropdown d-inline-block">
-                                <a class="btn-icon checkbox-dropdown dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                <div class="dropdown-menu" aria-labelledby="moreDropdown">
-                                    <a class="dropdown-item" id="checkbox_select_all" href="javascript:void(0);">Select All</a>
-                                    <a class="dropdown-item" id="checkbox_deselect_all" href="javascript:void(0);">Deselect All</a>
-                                </div>
-                            </div>
-                            <div class="card-options d-inline-block">
-                                <a href="#"><i class="ik ik-inbox"></i></a>
-                                <a href="#"><i class="ik ik-plus"></i></a>
-                                <a href="#"><i class="ik ik-rotate-cw"></i></a>
-                                <div class="dropdown d-inline-block">
-                                    <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-more-horizontal"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="moreDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">More Action</a>
-                                    </div>
-                                </div>
+                                    <hr class="my-2">
+                                    <li>
+                                        <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
+                                    </li>
+                                    <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="col col-sm-6">
-                            <div class="card-search with-adv-search dropdown">
-                                <form action="">
-                                    <input type="text" class="form-control" placeholder="Search.." required>
-                                    <button type="submit" class="btn btn-icon"><i class="ik ik-search"></i></button>
-                                    <button type="button" id="adv_wrap_toggler" class="adv-btn ik ik-chevron-down dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                    <div class="adv-search-wrap dropdown-menu dropdown-menu-right" aria-labelledby="adv_wrap_toggler">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Full Name">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email">
-                                        </div>
-                                        <button class="btn btn-theme">Search</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col col-sm-3">
-                            <div class="card-options text-right">
-                                <span class="mr-5">1 - 50 of 2,500</span>
-                                <a href="#"><i class="ik ik-chevron-left"></i></a>
-                                <a href="#"><i class="ik ik-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="list-item-wrap">
-                            <div class="list-item">
-                                <div class="item-inner">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
-                                        <span class="custom-control-label">&nbsp;</span>
-                                    </label>
-                                    <div class="list-title"><a href="javascript:void(0)">Lorem Ipsum is simply dumm dummy text of the printing and typesetting industry.</a></div>
-                                    <div class="list-actions">
-                                        <a href="#"><i class="ik ik-eye"></i></a>
-                                        <a href="#"><i class="ik ik-inbox"></i></a>
-                                        <a href="#"><i class="ik ik-edit-2"></i></a>
-                                        <a href="#"><i class="ik ik-trash-2"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="qickview-wrap">
-                                    <div class="desc">
-                                        <p>Fusce suscipit turpis a dolor posuere ornare at a ante. Quisque nec libero facilisis, egestas tortor eget, mattis dui. Curabitur viverra laoreet ligula at hendrerit. Nullam sollicitudin maximus leo, vel pulvinar orci semper id. Donec vehicula tempus enim a facilisis. Proin dignissim porttitor sem, sed pulvinar tortor gravida vitae.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="item-inner">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option2">
-                                        <span class="custom-control-label">&nbsp;</span>
-                                    </label>
-                                    <div class="list-title"><a href="javascript:void(0)">Aenean eu pharetra arcu, vitae elementum sem. Sed non ligula molestie, finibus lacus at, suscipit mi. Nunc luctus lacus vel felis blandit, eu finibus augue tincidunt.</a></div>
-                                    <div class="list-actions">
-                                        <a href="#"><i class="ik ik-eye"></i></a>
-                                        <a href="#"><i class="ik ik-inbox"></i></a>
-                                        <a href="#"><i class="ik ik-edit-2"></i></a>
-                                        <a href="#"><i class="ik ik-trash-2"></i></a>
-                                    </div>
-                                </div>
-                                <div class="qickview-wrap">
-                                    <div class="desc">
-                                        <p>Fusce suscipit turpis a dolor posuere ornare at a ante. Quisque nec libero facilisis, egestas tortor eget, mattis dui. Curabitur viverra laoreet ligula at hendrerit. Nullam sollicitudin maximus leo, vel pulvinar orci semper id. Donec vehicula tempus enim a facilisis. Proin dignissim porttitor sem, sed pulvinar tortor gravida vitae.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="item-inner">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option3">
-                                        <span class="custom-control-label">&nbsp;</span>
-                                    </label>
-                                    <div class="list-title"><a href="javascript:void(0)">Donec lectus augue, suscipit in sodales sit amet, semper sit amet enim. Duis pretium, nisi id pretium ornare, tortor nibh sodales tellus.</a></div>
-                                    <div class="list-actions">
-                                        <a href="#"><i class="ik ik-eye"></i></a>
-                                        <a href="#"><i class="ik ik-inbox"></i></a>
-                                        <a href="#"><i class="ik ik-edit-2"></i></a>
-                                        <a href="#"><i class="ik ik-trash-2"></i></a>
-                                    </div>
-                                </div>
-                                <div class="qickview-wrap">
-                                    <div class="desc">
-                                        <p>Fusce suscipit turpis a dolor posuere ornare at a ante. Quisque nec libero facilisis, egestas tortor eget, mattis dui. Curabitur viverra laoreet ligula at hendrerit. Nullam sollicitudin maximus leo, vel pulvinar orci semper id. Donec vehicula tempus enim a facilisis. Proin dignissim porttitor sem, sed pulvinar tortor gravida vitae.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header row">
-                        <div class="col col-sm-3">
-                            <div class="card-options d-inline-block">
-                                <a href="#"><i class="ik ik-inbox"></i></a>
-                                <a href="#"><i class="ik ik-plus"></i></a>
-                                <a href="#"><i class="ik ik-rotate-cw"></i></a>
-                                <div class="dropdown d-inline-block">
-                                    <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-more-horizontal"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="moreDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">More Action</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-sm-6">
-                            <div class="card-search with-adv-search dropdown">
-                                <form action="">
-                                    <input type="text" class="form-control global_filter" id="global_filter" placeholder="Search.." required>
-                                    <button type="submit" class="btn btn-icon"><i class="ik ik-search"></i></button>
-                                    <button type="button" id="adv_wrap_toggler" class="adv-btn ik ik-chevron-down dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                    <div class="adv-search-wrap dropdown-menu dropdown-menu-right" aria-labelledby="adv_wrap_toggler">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control column_filter" id="col0_filter" placeholder="Name" data-column="0">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control column_filter" id="col1_filter" placeholder="Position" data-column="1">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control column_filter" id="col2_filter" placeholder="Office" data-column="2">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control column_filter" id="col3_filter" placeholder="Age" data-column="3">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control column_filter" id="col4_filter" placeholder="Start date" data-column="4">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control column_filter" id="col5_filter" placeholder="Salary" data-column="5">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-theme">Search</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col col-sm-3">
-                            <div class="card-options text-right">
-                                <span class="mr-5" id="top">1 - 50 of 2,500</span>
-                                <a href="#"><i class="ik ik-chevron-left"></i></a>
-                                <a href="#"><i class="ik ik-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <table id="advanced_table" class="table">
-                            <thead>
-                                <tr>
-                                    <th class="nosort" width="10">
-                                        <label class="custom-control custom-checkbox m-0">
-                                            <input type="checkbox" class="custom-control-input" id="selectall" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </th>
-                                    <th class="nosort">Avatar</th>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/1.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/2.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/3.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009/01/12</td>
-                                    <td>$86,000</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/4.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                    <td>22</td>
-                                    <td>2012/03/29</td>
-                                    <td>$433,060</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/5.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>33</td>
-                                    <td>2008/11/28</td>
-                                    <td>$162,700</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/1.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Brielle Williamson</td>
-                                    <td>Integration Specialist</td>
-                                    <td>New York</td>
-                                    <td>61</td>
-                                    <td>2012/12/02</td>
-                                    <td>$372,000</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/2.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Herrod Chandler</td>
-                                    <td>Sales Assistant</td>
-                                    <td>San Francisco</td>
-                                    <td>59</td>
-                                    <td>2012/08/06</td>
-                                    <td>$137,500</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/3.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Rhona Davidson</td>
-                                    <td>Integration Specialist</td>
-                                    <td>Tokyo</td>
-                                    <td>55</td>
-                                    <td>2010/10/14</td>
-                                    <td>$327,900</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                            <span class="custom-control-label">&nbsp;</span>
-                                        </label>
-                                    </td>
-                                    <td><img src="img/users/4.jpg" class="table-user-thumb" alt=""></td>
-                                    <td>Colleen Hurst</td>
-                                    <td>Javascript Developer</td>
-                                    <td>San Francisco</td>
-                                    <td>39</td>
-                                    <td>2009/09/15</td>
-                                    <td>$205,500</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        <aside class="right-sidebar">
-            <div class="sidebar-chat" data-plugin="chat-sidebar">
-                <div class="sidebar-chat-info">
-                    <h6>Chat List</h6>
-                    <form class="mr-t-10">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search for friends ...">
-                            <i class="ik ik-search"></i>
-                        </div>
-                    </form>
-                </div>
-                <div class="chat-list">
-                    <div class="list-group row">
-                        <a href="javascript:void(0)" class="list-group-item" data-chat-user="Gene Newman">
-                            <figure class="user--online">
-                                <img src="img/users/1.jpg" class="rounded-circle" alt="">
-                            </figure><span><span class="name">Gene Newman</span> <span class="username">@gene_newman</span> </span>
-                        </a>
-                        <a href="javascript:void(0)" class="list-group-item" data-chat-user="Billy Black">
-                            <figure class="user--online">
-                                <img src="img/users/2.jpg" class="rounded-circle" alt="">
-                            </figure><span><span class="name">Billy Black</span> <span class="username">@billyblack</span> </span>
-                        </a>
-                        <a href="javascript:void(0)" class="list-group-item" data-chat-user="Herbert Diaz">
-                            <figure class="user--online">
-                                <img src="img/users/3.jpg" class="rounded-circle" alt="">
-                            </figure><span><span class="name">Herbert Diaz</span> <span class="username">@herbert</span> </span>
-                        </a>
-                        <a href="javascript:void(0)" class="list-group-item" data-chat-user="Sylvia Harvey">
-                            <figure class="user--busy">
-                                <img src="img/users/4.jpg" class="rounded-circle" alt="">
-                            </figure><span><span class="name">Sylvia Harvey</span> <span class="username">@sylvia</span> </span>
-                        </a>
-                        <a href="javascript:void(0)" class="list-group-item active" data-chat-user="Marsha Hoffman">
-                            <figure class="user--busy">
-                                <img src="img/users/5.jpg" class="rounded-circle" alt="">
-                            </figure><span><span class="name">Marsha Hoffman</span> <span class="username">@m_hoffman</span> </span>
-                        </a>
-                        <a href="javascript:void(0)" class="list-group-item" data-chat-user="Mason Grant">
-                            <figure class="user--offline">
-                                <img src="img/users/1.jpg" class="rounded-circle" alt="">
-                            </figure><span><span class="name">Mason Grant</span> <span class="username">@masongrant</span> </span>
-                        </a>
-                        <a href="javascript:void(0)" class="list-group-item" data-chat-user="Shelly Sullivan">
-                            <figure class="user--offline">
-                                <img src="img/users/2.jpg" class="rounded-circle" alt="">
-                            </figure><span><span class="name">Shelly Sullivan</span> <span class="username">@shelly</span></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <div class="chat-panel" hidden>
-            <div class="card">
-                <div class="card-header d-flex justify-content-between">
-                    <a href="javascript:void(0);"><i class="ik ik-message-square text-success"></i></a>
-                    <span class="user-name">John Doe</span>
-                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>
-                </div>
-                <div class="card-body">
-                    <div class="widget-chat-activity flex-1">
-                        <div class="messages">
-                            <div class="message media reply">
-                                <figure class="user--online">
-                                    <a href="#">
-                                        <img src="img/users/3.jpg" class="rounded-circle" alt="">
-                                    </a>
-                                </figure>
-                                <div class="message-body media-body">
-                                    <p>Epic Cheeseburgers come in all kind of styles.</p>
-                                </div>
-                            </div>
-                            <div class="message media">
-                                <figure class="user--online">
-                                    <a href="#">
-                                        <img src="img/users/1.jpg" class="rounded-circle" alt="">
-                                    </a>
-                                </figure>
-                                <div class="message-body media-body">
-                                    <p>Cheeseburgers make your knees weak.</p>
-                                </div>
-                            </div>
-                            <div class="message media reply">
-                                <figure class="user--offline">
-                                    <a href="#">
-                                        <img src="img/users/5.jpg" class="rounded-circle" alt="">
-                                    </a>
-                                </figure>
-                                <div class="message-body media-body">
-                                    <p>Cheeseburgers will never let you down.</p>
-                                    <p>They'll also never run around or desert you.</p>
-                                </div>
-                            </div>
-                            <div class="message media">
-                                <figure class="user--online">
-                                    <a href="#">
-                                        <img src="img/users/1.jpg" class="rounded-circle" alt="">
-                                    </a>
-                                </figure>
-                                <div class="message-body media-body">
-                                    <p>A great cheeseburger is a gastronomical event.</p>
-                                </div>
-                            </div>
-                            <div class="message media reply">
-                                <figure class="user--busy">
-                                    <a href="#">
-                                        <img src="img/users/5.jpg" class="rounded-circle" alt="">
-                                    </a>
-                                </figure>
-                                <div class="message-body media-body">
-                                    <p>There's a cheesy incarnation waiting for you no matter what you palete preferences are.</p>
-                                </div>
-                            </div>
-                            <div class="message media">
-                                <figure class="user--online">
-                                    <a href="#">
-                                        <img src="img/users/1.jpg" class="rounded-circle" alt="">
-                                    </a>
-                                </figure>
-                                <div class="message-body media-body">
-                                    <p>If you are a vegan, we are sorry for you loss.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form action="javascript:void(0)" class="card-footer" method="post">
-                    <div class="d-flex justify-content-end">
-                        <textarea class="border-0 flex-1" rows="1" placeholder="Type your message here"></textarea>
-                        <button class="btn btn-icon" type="submit"><i class="ik ik-arrow-right text-success"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <div class="w-100 clearfix">
-                <span class="text-center text-sm-left d-md-inline-block">Copyright © 2018 ThemeKit v2.0. All Rights Reserved.</span>
-                <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://lavalite.org/" class="text-dark" target="_blank">Lavalite</a></span>
-            </div>
-        </footer>
-
     </div>
-</div>
+    <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+    <!--**********************************
+            Sidebar start
+        ***********************************-->
+    <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+            <ul class="metismenu" id="menu">
+                <li class="nav-label">Dashboard</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./index.html">Home 1</a></li>
+                        <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+                    </ul>
+                </li>
+                <li class="mega-menu mega-menu-sm">
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./layout-blank.html">Blank</a></li>
+                        <li><a href="./layout-one-column.html">One Column</a></li>
+                        <li><a href="./layout-two-column.html">Two column</a></li>
+                        <li><a href="./layout-compact-nav.html">Compact Nav</a></li>
+                        <li><a href="./layout-vertical.html">Vertical</a></li>
+                        <li><a href="./layout-horizontal.html">Horizontal</a></li>
+                        <li><a href="./layout-boxed.html">Boxed</a></li>
+                        <li><a href="./layout-wide.html">Wide</a></li>
 
 
+                        <li><a href="./layout-fixed-header.html">Fixed Header</a></li>
+                        <li><a href="layout-fixed-sidebar.html">Fixed Sidebar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-label">Apps</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-envelope menu-icon"></i> <span class="nav-text">Email</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./email-inbox.html">Inbox</a></li>
+                        <li><a href="./email-read.html">Read</a></li>
+                        <li><a href="./email-compose.html">Compose</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Apps</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./app-profile.html">Profile</a></li>
+                        <li><a href="./app-calender.html">Calender</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-graph menu-icon"></i> <span class="nav-text">Charts</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./chart-flot.html">Flot</a></li>
+                        <li><a href="./chart-morris.html">Morris</a></li>
+                        <li><a href="./chart-chartjs.html">Chartjs</a></li>
+                        <li><a href="./chart-chartist.html">Chartist</a></li>
+                        <li><a href="./chart-sparkline.html">Sparkline</a></li>
+                        <li><a href="./chart-peity.html">Peity</a></li>
+                    </ul>
+                </li>
+                <li class="nav-label">UI Components</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-grid menu-icon"></i><span class="nav-text">UI Components</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./ui-accordion.html">Accordion</a></li>
+                        <li><a href="./ui-alert.html">Alert</a></li>
+                        <li><a href="./ui-badge.html">Badge</a></li>
+                        <li><a href="./ui-button.html">Button</a></li>
+                        <li><a href="./ui-button-group.html">Button Group</a></li>
+                        <li><a href="./ui-cards.html">Cards</a></li>
+                        <li><a href="./ui-carousel.html">Carousel</a></li>
+                        <li><a href="./ui-dropdown.html">Dropdown</a></li>
+                        <li><a href="./ui-list-group.html">List Group</a></li>
+                        <li><a href="./ui-media-object.html">Media Object</a></li>
+                        <li><a href="./ui-modal.html">Modal</a></li>
+                        <li><a href="./ui-pagination.html">Pagination</a></li>
+                        <li><a href="./ui-popover.html">Popover</a></li>
+                        <li><a href="./ui-progressbar.html">Progressbar</a></li>
+                        <li><a href="./ui-tab.html">Tab</a></li>
+                        <li><a href="./ui-typography.html">Typography</a></li>
+                        <!-- </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
+                        </a>
+                        <ul aria-expanded="false"> -->
+                        <li><a href="./uc-nestedable.html">Nestedable</a></li>
+                        <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
+                        <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
+                        <li><a href="./uc-toastr.html">Toastr</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="widgets.html" aria-expanded="false">
+                        <i class="icon-badge menu-icon"></i><span class="nav-text">Widget</span>
+                    </a>
+                </li>
+                <li class="nav-label">Forms</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-note menu-icon"></i><span class="nav-text">Forms</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./form-basic.html">Basic Form</a></li>
+                        <li><a href="./form-validation.html">Form Validation</a></li>
+                        <li><a href="./form-step.html">Step Form</a></li>
+                        <li><a href="./form-editor.html">Editor</a></li>
+                        <li><a href="./form-picker.html">Picker</a></li>
+                    </ul>
+                </li>
+                <li class="nav-label">Table</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-menu menu-icon"></i><span class="nav-text">Table</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./table-basic.html" aria-expanded="false">Basic Table</a></li>
+                        <li><a href="./table-datatable.html" aria-expanded="false">Data Table</a></li>
+                    </ul>
+                </li>
+                <li class="nav-label">Pages</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-notebook menu-icon"></i><span class="nav-text">Pages</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="./page-login.html">Login</a></li>
+                        <li><a href="./page-register.html">Register</a></li>
+                        <li><a href="./page-lock.html">Lock Screen</a></li>
+                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                            <ul aria-expanded="false">
+                                <li><a href="./page-error-404.html">Error 404</a></li>
+                                <li><a href="./page-error-403.html">Error 403</a></li>
+                                <li><a href="./page-error-400.html">Error 400</a></li>
+                                <li><a href="./page-error-500.html">Error 500</a></li>
+                                <li><a href="./page-error-503.html">Error 503</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--**********************************
+            Sidebar end
+        ***********************************-->
 
+    <!--**********************************
+            Content body start
+        ***********************************-->
+    <div class="content-body">
 
-<div class="modal fade apps-modal" id="appsModal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true" data-backdrop="false">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ik ik-x-circle"></i></button>
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="quick-search">
-                <div class="container">
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-1">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Products Sold</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">4565</h2>
+                                <p class="text-white mb-0">Jan - March 2019</p>
+                            </div>
+                            <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-2">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Net Profit</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">$ 8541</h2>
+                                <p class="text-white mb-0">Jan - March 2019</p>
+                            </div>
+                            <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-3">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">New Customers</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">4565</h2>
+                                <p class="text-white mb-0">Jan - March 2019</p>
+                            </div>
+                            <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-4">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Customer Satisfaction</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">99%</h2>
+                                <p class="text-white mb-0">Jan - March 2019</p>
+                            </div>
+                            <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-md-4 ml-auto mr-auto">
-                            <div class="input-wrap">
-                                <input type="text" id="quick-search" class="form-control" placeholder="Search..." />
-                                <i class="ik ik-search"></i>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body pb-0 d-flex justify-content-between">
+                                    <div>
+                                        <h4 class="mb-1">Product Sales</h4>
+                                        <p>Total Earnings of the Month</p>
+                                        <h3 class="m-0">$ 12,555</h3>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li class="d-inline-block mr-3"><a class="text-dark" href="#">Day</a></li>
+                                            <li class="d-inline-block mr-3"><a class="text-dark" href="#">Week</a></li>
+                                            <li class="d-inline-block"><a class="text-dark" href="#">Month</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="chart-wrapper">
+                                    <canvas id="chart_widget_2"></canvas>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100 mr-2">
+                                            <h6>Pixel 2</h6>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-danger" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ml-2 w-100">
+                                            <h6>iPhone X</h6>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-primary" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-body d-flex align-items-center">
-                <div class="container">
-                    <div class="apps-wrap">
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
+
+
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Order Summary</h4>
+                            <div id="morris-bar-chart"></div>
                         </div>
-                        <div class="app-item dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-command"></i><span>Ui</span></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-widget">
+                        <div class="card-body">
+                            <h5 class="text-muted">Order Overview </h5>
+                            <h2 class="mt-4">5680</h2>
+                            <span>Total Revenue</span>
+                            <div class="mt-4">
+                                <h4>30</h4>
+                                <h6>Online Order <span class="pull-right">30%</span></h6>
+                                <div class="progress mb-3" style="height: 7px">
+                                    <div class="progress-bar bg-primary" style="width: 30%;" role="progressbar"><span class="sr-only">30% Order</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h4>50</h4>
+                                <h6 class="m-t-10 text-muted">Offline Order <span class="pull-right">50%</span></h6>
+                                <div class="progress mb-3" style="height: 7px">
+                                    <div class="progress-bar bg-success" style="width: 50%;" role="progressbar"><span class="sr-only">50% Order</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h4>20</h4>
+                                <h6 class="m-t-10 text-muted">Cash On Develery <span class="pull-right">20%</span></h6>
+                                <div class="progress mb-3" style="height: 7px">
+                                    <div class="progress-bar bg-warning" style="width: 20%;" role="progressbar"><span class="sr-only">20% Order</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-mail"></i><span>Message</span></a>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body px-0">
+                            <h4 class="card-title px-4 mb-3">Todo</h4>
+                            <div class="todo-list">
+                                <div class="tdl-holder">
+                                    <div class="tdl-content">
+                                        <ul id="todo_list">
+                                            <li><label><input type="checkbox"><i></i><span>Get up</span><a href='#' class="ti-trash"></a></label></li>
+                                            <li><label><input type="checkbox" checked><i></i><span>Stand up</span><a href='#' class="ti-trash"></a></label></li>
+                                            <li><label><input type="checkbox"><i></i><span>Don't give up the fight.</span><a href='#' class="ti-trash"></a></label></li>
+                                            <li><label><input type="checkbox" checked><i></i><span>Do something else</span><a href='#' class="ti-trash"></a></label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="px-4">
+                                        <input type="text" class="tdl-new form-control" placeholder="Write new item and hit 'Enter'...">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-users"></i><span>Accounts</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="./images/users/8.jpg" class="rounded-circle" alt="">
+                                <h5 class="mt-3 mb-1">Ana Liem</h5>
+                                <p class="m-0">Senior Manager</p>
+                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-shopping-cart"></i><span>Sales</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="./images/users/5.jpg" class="rounded-circle" alt="">
+                                <h5 class="mt-3 mb-1">John Abraham</h5>
+                                <p class="m-0">Store Manager</p>
+                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-briefcase"></i><span>Purchase</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="./images/users/7.jpg" class="rounded-circle" alt="">
+                                <h5 class="mt-3 mb-1">John Doe</h5>
+                                <p class="m-0">Sales Man</p>
+                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-server"></i><span>Menus</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="./images/users/1.jpg" class="rounded-circle" alt="">
+                                <h5 class="mt-3 mb-1">Mehedi Titas</h5>
+                                <p class="m-0">Online Marketer</p>
+                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-clipboard"></i><span>Pages</span></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="active-member">
+                                <div class="table-responsive">
+                                    <table class="table table-xs mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Customers</th>
+                                                <th>Product</th>
+                                                <th>Country</th>
+                                                <th>Status</th>
+                                                <th>Payment Method</th>
+                                                <th>Activity</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="./images/avatar/1.jpg" class=" rounded-circle mr-3" alt="">Sarah Smith</td>
+                                                <td>iPhone X</td>
+                                                <td>
+                                                    <span>United States</span>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <div class="progress" style="height: 6px">
+                                                            <div class="progress-bar bg-success" style="width: 50%"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
+                                                <td>
+                                                    <span>Last Login</span>
+                                                    <span class="m-0 pl-3">10 sec ago</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./images/avatar/2.jpg" class=" rounded-circle mr-3" alt="">Walter R.</td>
+                                                <td>Pixel 2</td>
+                                                <td><span>Canada</span></td>
+                                                <td>
+                                                    <div>
+                                                        <div class="progress" style="height: 6px">
+                                                            <div class="progress-bar bg-success" style="width: 50%"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
+                                                <td>
+                                                    <span>Last Login</span>
+                                                    <span class="m-0 pl-3">50 sec ago</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./images/avatar/3.jpg" class=" rounded-circle mr-3" alt="">Andrew D.</td>
+                                                <td>OnePlus</td>
+                                                <td><span>Germany</span></td>
+                                                <td>
+                                                    <div>
+                                                        <div class="progress" style="height: 6px">
+                                                            <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="fa fa-circle-o text-warning  mr-2"></i> Pending</td>
+                                                <td>
+                                                    <span>Last Login</span>
+                                                    <span class="m-0 pl-3">10 sec ago</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./images/avatar/6.jpg" class=" rounded-circle mr-3" alt=""> Megan S.</td>
+                                                <td>Galaxy</td>
+                                                <td><span>Japan</span></td>
+                                                <td>
+                                                    <div>
+                                                        <div class="progress" style="height: 6px">
+                                                            <div class="progress-bar bg-success" style="width: 50%"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
+                                                <td>
+                                                    <span>Last Login</span>
+                                                    <span class="m-0 pl-3">10 sec ago</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./images/avatar/4.jpg" class=" rounded-circle mr-3" alt=""> Doris R.</td>
+                                                <td>Moto Z2</td>
+                                                <td><span>England</span></td>
+                                                <td>
+                                                    <div>
+                                                        <div class="progress" style="height: 6px">
+                                                            <div class="progress-bar bg-success" style="width: 50%"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
+                                                <td>
+                                                    <span>Last Login</span>
+                                                    <span class="m-0 pl-3">10 sec ago</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./images/avatar/5.jpg" class=" rounded-circle mr-3" alt="">Elizabeth W.</td>
+                                                <td>Notebook Asus</td>
+                                                <td><span>China</span></td>
+                                                <td>
+                                                    <div>
+                                                        <div class="progress" style="height: 6px">
+                                                            <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="fa fa-circle-o text-warning  mr-2"></i> Pending</td>
+                                                <td>
+                                                    <span>Last Login</span>
+                                                    <span class="m-0 pl-3">10 sec ago</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-message-square"></i><span>Chats</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6">
+
+                    <div class="card">
+                        <div class="chart-wrapper mb-4">
+                            <div class="px-4 pt-4 d-flex justify-content-between">
+                                <div>
+                                    <h4>Sales Activities</h4>
+                                    <p>Last 6 Month</p>
+                                </div>
+                                <div>
+                                    <span><i class="fa fa-caret-up text-success"></i></span>
+                                    <h4 class="d-inline-block text-success">720</h4>
+                                    <p class=" text-danger">+120.5(5.0%)</p>
+                                </div>
+                            </div>
+                            <div>
+                                <canvas id="chart_widget_3"></canvas>
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-map-pin"></i><span>Contacts</span></a>
+                        <div class="card-body border-top pt-4">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul>
+                                        <li>5% Negative Feedback</li>
+                                        <li>95% Positive Feedback</li>
+                                    </ul>
+                                    <div>
+                                        <h5>Customer Feedback</h5>
+                                        <h3>385749</h3>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="chart_widget_3_1"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-box"></i><span>Blocks</span></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Activity</h4>
+                            <div id="activity">
+                                <div class="media border-bottom-1 pt-3 pb-3">
+                                    <img width="35" src="./images/avatar/1.jpg" class="mr-3 rounded-circle">
+                                    <div class="media-body">
+                                        <h5>Received New Order</h5>
+                                        <p class="mb-0">I shared this on my fb wall a few months back,</p>
+                                    </div><span class="text-muted ">April 24, 2018</span>
+                                </div>
+                                <div class="media border-bottom-1 pt-3 pb-3">
+                                    <img width="35" src="./images/avatar/2.jpg" class="mr-3 rounded-circle">
+                                    <div class="media-body">
+                                        <h5>iPhone develered</h5>
+                                        <p class="mb-0">I shared this on my fb wall a few months back,</p>
+                                    </div><span class="text-muted ">April 24, 2018</span>
+                                </div>
+                                <div class="media border-bottom-1 pt-3 pb-3">
+                                    <img width="35" src="./images/avatar/2.jpg" class="mr-3 rounded-circle">
+                                    <div class="media-body">
+                                        <h5>3 Order Pending</h5>
+                                        <p class="mb-0">I shared this on my fb wall a few months back,</p>
+                                    </div><span class="text-muted ">April 24, 2018</span>
+                                </div>
+                                <div class="media border-bottom-1 pt-3 pb-3">
+                                    <img width="35" src="./images/avatar/2.jpg" class="mr-3 rounded-circle">
+                                    <div class="media-body">
+                                        <h5>Join new Manager</h5>
+                                        <p class="mb-0">I shared this on my fb wall a few months back,</p>
+                                    </div><span class="text-muted ">April 24, 2018</span>
+                                </div>
+                                <div class="media border-bottom-1 pt-3 pb-3">
+                                    <img width="35" src="./images/avatar/2.jpg" class="mr-3 rounded-circle">
+                                    <div class="media-body">
+                                        <h5>Branch open 5 min Late</h5>
+                                        <p class="mb-0">I shared this on my fb wall a few months back,</p>
+                                    </div><span class="text-muted ">April 24, 2018</span>
+                                </div>
+                                <div class="media border-bottom-1 pt-3 pb-3">
+                                    <img width="35" src="./images/avatar/2.jpg" class="mr-3 rounded-circle">
+                                    <div class="media-body">
+                                        <h5>New support ticket received</h5>
+                                        <p class="mb-0">I shared this on my fb wall a few months back,</p>
+                                    </div><span class="text-muted ">April 24, 2018</span>
+                                </div>
+                                <div class="media pt-3 pb-3">
+                                    <img width="35" src="./images/avatar/3.jpg" class="mr-3 rounded-circle">
+                                    <div class="media-body">
+                                        <h5>Facebook Post 30 Comments</h5>
+                                        <p class="mb-0">I shared this on my fb wall a few months back,</p>
+                                    </div><span class="text-muted ">April 24, 2018</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-calendar"></i><span>Events</span></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12 col-sm-12 col-xxl-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title mb-0">Store Location</h4>
+                            <div id="world-map" style="height: 470px;"></div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-bell"></i><span>Notifications</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="social-graph-wrapper widget-facebook">
+                            <span class="s-icon"><i class="fa fa-facebook"></i></span>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-pie-chart"></i><span>Reports</span></a>
+                        <div class="row">
+                            <div class="col-6 border-right">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">89k</h4>
+                                    <p class="m-0">Friends</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">119k</h4>
+                                    <p class="m-0">Followers</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-layers"></i><span>Tasks</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="social-graph-wrapper widget-linkedin">
+                            <span class="s-icon"><i class="fa fa-linkedin"></i></span>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-edit"></i><span>Blogs</span></a>
+                        <div class="row">
+                            <div class="col-6 border-right">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">89k</h4>
+                                    <p class="m-0">Friends</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">119k</h4>
+                                    <p class="m-0">Followers</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-settings"></i><span>Settings</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="social-graph-wrapper widget-googleplus">
+                            <span class="s-icon"><i class="fa fa-google-plus"></i></span>
                         </div>
-                        <div class="app-item">
-                            <a href="#"><i class="ik ik-more-horizontal"></i><span>More</span></a>
+                        <div class="row">
+                            <div class="col-6 border-right">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">89k</h4>
+                                    <p class="m-0">Friends</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">119k</h4>
+                                    <p class="m-0">Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="social-graph-wrapper widget-twitter">
+                            <span class="s-icon"><i class="fa fa-twitter"></i></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 border-right">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">89k</h4>
+                                    <p class="m-0">Friends</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                    <h4 class="m-1">119k</h4>
+                                    <p class="m-0">Followers</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- #/ container -->
     </div>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+    <!--**********************************
+            Footer start
+        ***********************************-->
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+        </div>
+    </div>
+    <!--**********************************
+            Footer end
+        ***********************************-->
 </div>
+<!--**********************************
+        Main wrapper end
+    ***********************************-->

@@ -1,42 +1,34 @@
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>
-    window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')
-</script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/popper.js/dist/umd/popper.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/screenfull/dist/screenfull.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/jvectormap/jquery-jvectormap.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/moment/moment.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/d3/dist/d3.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>plugins/c3/c3.min.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>js/tables.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>js/widgets.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>js/charts.js"></script>
-<script src="<?= base_url('assets/dashboard/') ?>dist/js/theme.min.js"></script>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function() {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
-    ga('send', 'pageview');
-</script>
+<!--**********************************
+        Scripts
+    ***********************************-->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>plugins/common/common.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/custom.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/settings.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/gleek.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/styleSwitcher.js"></script>
+
+<!-- Chartjs -->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/chart.js/Chart.bundle.min.js"></script>
+<!-- Circle progress -->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/circle-progress/circle-progress.min.js"></script>
+<!-- Datamap -->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/d3v3/index.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/topojson/topojson.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/datamaps/datamaps.world.min.js"></script>
+<!-- Morrisjs -->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/raphael/raphael.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/morris/morris.min.js"></script>
+<!-- Pignose Calender -->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/moment/moment.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+<!-- ChartistJS -->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/chartist/js/chartist.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+
+
+<script src="<?= base_url('assets/vendor/quixlab/') ?>/js/dashboard/dashboard-1.js"></script>
+
 </body>
 
 </html>

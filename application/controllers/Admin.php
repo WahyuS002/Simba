@@ -12,9 +12,10 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['title'] = 'Admin';
+        $data['user'] = $this->db->get('tb_user')->row_array();
 
         $this->load->view('templates/dashboard_header', $data);
-        $this->load->view('admin/index');
+        $this->load->view('admin/index', $data);
         $this->load->view('templates/dashboard_footer');
     }
 }

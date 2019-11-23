@@ -1,59 +1,43 @@
-<div class="limiter">
-    <div class="container-login100">
-        <div class="wrap-login100">
+<!--*******************
+        Preloader start
+    ********************-->
+<div id="preloader">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+        </svg>
+    </div>
+</div>
+<!--*******************
+        Preloader end
+    ********************-->
 
-            <div class="login100-pic js-tilt" data-tilt>
-                <img src="<?= base_url('assets/img/') ?>img-01.png" alt="IMG">
+<div class="login-form-bg h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-xl-6">
+                <div class="form-input-content">
+                    <div class="card login-form mb-0">
+                        <div class="card-body pt-5">
+                            <a class="text-center" href="<?= base_url('auth') ?>">
+                                <h4>Rosella</h4>
+                                <?= $this->session->flashdata('message') ?>
+                            </a>
+
+                            <form class="mt-5 mb-5 login-input" method="post" action="<?= base_url('auth') ?>">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" id="email" name="email" value="<?= set_value('email') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+                                </div>
+                                <button class="btn login-form__btn submit w-100" type="submit">Sign In</button>
+                            </form>
+                            <p class="mt-5 login-form__footer">Dont have account? <a href="<?= base_url('auth/registration') ?>" class="text-primary">Sign Up</a> now</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <form class="login100-form validate-form" method="post" action="<?= base_url() ?>auth">
-                <?= $this->session->flashdata('message'); ?>
-                <span class="login100-form-title">
-                    Member Login
-                </span>
-
-                <div class="wrap-input100 validate-input">
-                    <input class="input100" type="text" name="email" placeholder="Email" id="email">
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </span>
-                </div>
-
-                <div class="wrap-input100 validate-input">
-                    <input class="input100" type="password" name="password" placeholder="Password" id="password">
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                    </span>
-                </div>
-
-                <div class="container-login100-form-btn">
-                    <a href="<?= base_url('auth') ?>"><button class="login100-form-btn" type="submit">
-                            Login
-                        </button>
-                    </a>
-
-                </div>
-
-                <div class="text-center p-t-12">
-                    <span class="txt1">
-                        Forgot
-                    </span>
-                    <a class="txt2" href="#">
-                        Username / Password?
-                    </a>
-                </div>
-
-                <div class="text-center p-t-136">
-                    <a class="txt2" href="<?= base_url('auth/registration'); ?>">
-                        Create your Account
-                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                    </a>
-                </div>
-
-            </form>
-
         </div>
     </div>
 </div>

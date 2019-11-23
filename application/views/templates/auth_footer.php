@@ -1,20 +1,11 @@
-<!--===============================================================================================-->
-<script src="<?= base_url('assets/') ?>vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="<?= base_url('assets/') ?>vendor/bootstrap/js/popper.js"></script>
-<script src="<?= base_url('assets/') ?>vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="<?= base_url('assets/') ?>vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-<script src="<?= base_url('assets/') ?>vendor/tilt/tilt.jquery.min.js"></script>
-<script>
-    $('.js-tilt').tilt({
-        scale: 1.1
-    })
-</script>
-<!--===============================================================================================-->
-<script src="js/main.js"></script>
-
+<!--**********************************
+        Scripts
+    ***********************************-->
+<script src="<?= base_url('assets/vendor/quixlab/') ?>plugins/common/common.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/custom.min.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/settings.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/gleek.js"></script>
+<script src="<?= base_url('assets/vendor/quixlab/') ?>js/styleSwitcher.js"></script>
 </body>
 
 </html>

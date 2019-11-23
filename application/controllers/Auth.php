@@ -11,6 +11,10 @@ class Auth extends CI_Controller
 
     public function index()
     {
+        //if ($this->session->userdata('email')) {
+        //    redirect('user');
+        //}
+
         $data['title'] = 'Login | Simba';
 
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
@@ -39,7 +43,11 @@ class Auth extends CI_Controller
                     'role_id' => $user['role_id']
                 ];
                 $this->session->set_userdata($data);
-                redirect('admin');
+                if ($user['role_id'] == 1) {
+                    redirect('admin');
+                } else {
+                    redirect('user');
+                }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                     Wrong Password!
@@ -56,6 +64,9 @@ class Auth extends CI_Controller
 
     public function registration()
     {
+        //if ($this->session->userdata('email')) {
+        //    redirect('user');
+        //}
         $data['title'] = 'Register | Simba';
 
         $this->form_validation->set_rules('username', 'Username', 'required|trim');
@@ -75,6 +86,7 @@ class Auth extends CI_Controller
         } else {
             $data = [
                 'username' => htmlspecialchars($this->input->post('username', true)),
+                'image' => 'default.jpg',
                 'email' => htmlspecialchars($this->input->post('email', true)),
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                 'role_id' => 2
