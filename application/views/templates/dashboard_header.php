@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/vendor/quixlab/') ?>/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="<?= base_url('assets/vendor/quixlab/') ?>css/style.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
 </head>
 

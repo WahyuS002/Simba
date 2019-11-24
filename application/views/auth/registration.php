@@ -21,7 +21,7 @@
                         <div class="card-body pt-5">
 
                             <a class="text-center" href="<?= base_url('auth') ?>">
-                                <h4>Rosella</h4>
+                                <h4>Register</h4>
                             </a>
 
                             <form class="mt-5 mb-5 login-input" method="post" action="<?= base_url('auth/registration') ?>">

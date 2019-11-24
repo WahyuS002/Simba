@@ -25,9 +25,14 @@
 <script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/chartist/js/chartist.min.js"></script>
 <script src="<?= base_url('assets/vendor/quixlab/') ?>/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
-
-
 <script src="<?= base_url('assets/vendor/quixlab/') ?>/js/dashboard/dashboard-1.js"></script>
+
+<script>
+    $('.custom-file-input').on('change', function() {
+        let filename = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(filename);
+    });
+</script>
 
 </body>
 

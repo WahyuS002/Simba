@@ -11,9 +11,9 @@ class Auth extends CI_Controller
 
     public function index()
     {
-        //if ($this->session->userdata('email')) {
-        //    redirect('user');
-        //}
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
 
         $data['title'] = 'Login | Simba';
 
@@ -64,9 +64,9 @@ class Auth extends CI_Controller
 
     public function registration()
     {
-        //if ($this->session->userdata('email')) {
-        //    redirect('user');
-        //}
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         $data['title'] = 'Register | Simba';
 
         $this->form_validation->set_rules('username', 'Username', 'required|trim');
@@ -98,5 +98,21 @@ class Auth extends CI_Controller
             </div>');
             redirect('auth');
         }
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('role_id');
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+            You have been logged out!
+          </div>');
+        redirect('auth');
+    }
+
+    public function blocked()
+    {
+        $this->load->view('auth/blocked');
     }
 }

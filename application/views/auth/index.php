@@ -20,7 +20,7 @@
                     <div class="card login-form mb-0">
                         <div class="card-body pt-5">
                             <a class="text-center" href="<?= base_url('auth') ?>">
-                                <h4>Rosella</h4>
+                                <h4>Login</h4>
                                 <?= $this->session->flashdata('message') ?>
                             </a>
 
