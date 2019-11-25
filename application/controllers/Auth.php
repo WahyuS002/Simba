@@ -50,7 +50,7 @@ class Auth extends CI_Controller
                 }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-                    Wrong Password!
+                    Email or Password Not Correct!
                     </div>');
                 redirect('auth');
             }
@@ -89,7 +89,8 @@ class Auth extends CI_Controller
                 'image' => 'default.jpg',
                 'email' => htmlspecialchars($this->input->post('email', true)),
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-                'role_id' => 2
+                'role_id' => 2,
+                'is_uploader' => '0'
             ];
 
             $this->db->insert('tb_user', $data);
@@ -113,6 +114,7 @@ class Auth extends CI_Controller
 
     public function blocked()
     {
-        $this->load->view('auth/blocked');
+        $data['title'] = 'Forbidden 404';
+        $this->load->view('auth/blocked', $data);
     }
 }

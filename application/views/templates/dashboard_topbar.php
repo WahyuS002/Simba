@@ -59,7 +59,7 @@
                                         <a href="<?= base_url('user') ?>"><i class="icon-user"></i> <span>Profile</span></a>
                                     </li>
                                     <hr class="my-2">
-                                    <li><a href="<?= base_url('logout') ?>"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    <li><a href="<?= base_url('auth/logout') ?>"><i class="icon-key"></i> <span>Logout</span></a></li>
                                 </ul>
                             </div>
                         </div>
