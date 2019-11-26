@@ -31,12 +31,6 @@
 
                 <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>') ?>
 
-                <?= $this->session->flashdata('message'); ?>
-
-                <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addNewSubmenu">
-                    Add New Submenu
-                </button>
-
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -57,7 +51,11 @@
                                 <td><?= $au['username'] ?></td>
                                 <td><?= $au['email'] ?></td>
                                 <td>
-                                    <a href="#" class="badge badge-pill badge-success">Edit</a>
+                                    <?php if ($au['is_uploader'] == 1) : ?>
+                                        <div class="badge badge-pill badge-success">verified</div>
+                                    <?php else : ?>
+                                        <a href="<?= base_url('admin/verification/') ?><?= $au['id_user'] ?>" class="badge badge-pill badge-warning">verifikasi</a>
+                                    <?php endif; ?>
                                     <a href="<?= base_url('admin/delete/') ?><?= $au['id_user'] ?>" class="badge badge-pill badge-danger" onclick="return confirm('yakin?')">Delete</a>
                                 </td>
                             </tr>

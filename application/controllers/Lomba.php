@@ -72,6 +72,9 @@ class Lomba extends CI_Controller
 
             $this->load->library('upload', $config);
 
+            $this->upload->do_upload('ktp');
+            $this->upload->do_upload('data_diri');
+
             $data = [
                 'ktp' => $ktp,
                 'data_diri' => $data_diri,
