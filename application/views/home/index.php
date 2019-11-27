@@ -23,24 +23,7 @@
 
 <div class="container-fluid ">
     <div class="row content">
-        <!-- <div class="col-lg-3 px-5 sidebar">
-            <ul class="nav flex-column text-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Menu-1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu-2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu-3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu-4</a>
-                </li>
-            </ul>
-        </div> -->
-
-        <div class="col-lg-9 col-md-12 col-sm-12 text-center">
+        <div class="text-center">
             <?php foreach ($lomba as $l) : ?>
                 <div class="card" style="width: 18rem;">
                     <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>">

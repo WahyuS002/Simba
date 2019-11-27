@@ -17,58 +17,62 @@
         ***********************************-->
 <div class="content-body">
 
-    <div class="container-fluid mt-3">
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-1">
-                    <div class="card-body">
-                        <h3 class="card-title text-white">Products Sold</h3>
-                        <div class="d-inline-block">
-                            <h2 class="text-white">4565</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
-                        </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
-                    </div>
-                </div>
+    <?php if ($user['role_id'] == 1) : ?>
+        <div class="container-fluid ">
+            <div class="mt-3">
+                <?= $this->session->flashdata('message') ?>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-2">
-                    <div class="card-body">
-                        <h3 class="card-title text-white">Net Profit</h3>
-                        <div class="d-inline-block">
-                            <h2 class="text-white">$ 8541</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
+            <div class="row content">
+                <div class="col-lg-9 col-md-12 col-sm-12 text-center">
+                    <?php foreach ($lomba as $l) : ?>
+                        <div class="card" style="width: 18rem;">
+                            <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>">
+                                <img src="<?= base_url() ?>/assets/img/lomba/<?= $l['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $l['judul_lomba'] ?></h5>
+                                <p class="card-text"><?= $l['deskripsi'] ?></p>
+                            </div>
+                            <a href="<?= base_url('lomba/edit_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-success">Edit</span></a>
+                            <a href="<?= base_url('lomba/delete_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-danger">Delete</span></a>
                         </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-3">
-                    <div class="card-body">
-                        <h3 class="card-title text-white">New Customers</h3>
-                        <div class="d-inline-block">
-                            <h2 class="text-white">4565</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
-                        </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-4">
-                    <div class="card-body">
-                        <h3 class="card-title text-white">Customer Satisfaction</h3>
-                        <div class="d-inline-block">
-                            <h2 class="text-white">99%</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
-                        </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
+    <?php else : ?>
 
-        <!--**********************************
+        <div class="container-fluid ">
+
+            <div class="mt-3">
+                <?= $this->session->flashdata('message') ?>
+            </div>
+            <?php foreach ($lomba_user as $l) : ?>
+
+                <div class="row content">
+
+                    <div class="col-lg-9 col-md-12 col-sm-12 text-center">
+                        <div class="card" style="width: 18rem;">
+                            <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>">
+                                <img src="<?= base_url() ?>/assets/img/lomba/<?= $l['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $l['judul_lomba'] ?></h5>
+                                <p class="card-text"><?= $l['deskripsi'] ?></p>
+                            </div>
+                            <a href="<?= base_url('lomba/edit_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-success">Edit</span></a>
+                            <a href="<?= base_url('lomba/delete_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-danger">Delete</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+    <?php endif; ?>
+
+</div>
+
+<!--**********************************
             Content body end
         ***********************************-->
