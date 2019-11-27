@@ -14,9 +14,24 @@ class Home extends CI_Controller
         $this->load->model('Home_model', 'lomba');
 
         $data['lomba'] = $this->lomba->getLomba();
+        $data['kategori'] = $this->lomba->getKategori();
 
         $this->load->view('templates/header', $data);
         $this->load->view('home/index', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function kategori_lomba($id)
+    {
+        $data['title'] = 'Home';
+        $this->load->model('Home_model', 'lomba');
+
+        $data['lomba'] = $this->lomba->getLomba();
+        $data['kategori'] = $this->lomba->getKategori();
+        $data['katLomba'] = $this->lomba->getLombaByKategori($id);
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('home/kategori_lomba', $data);
         $this->load->view('templates/footer');
     }
 

@@ -5,7 +5,16 @@ class Home_model extends CI_Model
 {
     public function getLomba()
     {
-        $query = "SELECT * FROM tb_lomba";
-        return $this->db->query($query)->result_array();
+        return $this->db->get('tb_lomba')->result_array();
+    }
+
+    public function getKategori()
+    {
+        return $this->db->get('tb_kategori')->result_array();
+    }
+
+    public function getLombaByKategori($id)
+    {
+        return $this->db->get_where('tb_lomba', ['id_kategori' => $id])->result_array();
     }
 }

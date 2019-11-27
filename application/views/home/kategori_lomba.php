@@ -41,17 +41,21 @@
         </div> -->
 
         <div class="col-lg-9 col-md-12 col-sm-12 text-center">
-            <?php foreach ($lomba as $l) : ?>
-                <div class="card" style="width: 18rem;">
-                    <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>">
-                        <img src="<?= base_url() ?>/assets/img/lomba/<?= $l['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $l['judul_lomba'] ?></h5>
-                        <p class="card-text"><?= $l['deskripsi'] ?></p>
-                        <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>" class="btn btn-1">Detail lomba</a>
+            <?php foreach ($katLomba as $kl) : ?>
+                <?php if ($kl['id_lomba'] == 1) : ?>
+                    <?= redirect('home') ?>
+                <?php else : ?>
+                    <div class="card" style="width: 18rem;">
+                        <a href="<?= base_url('home/detail/') ?><?= $kl['id_lomba'] ?>">
+                            <img src="<?= base_url() ?>/assets/img/lomba/<?= $kl['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $kl['judul_lomba'] ?></h5>
+                            <p class="card-text"><?= $kl['deskripsi'] ?></p>
+                            <a href="<?= base_url('home/detail/') ?><?= $kl['id_lomba'] ?>" class="btn btn-1">Detail lomba</a>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
             <?php endforeach; ?>
         </div>
     </div>
