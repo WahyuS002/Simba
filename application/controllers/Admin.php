@@ -15,6 +15,10 @@ class Admin extends CI_Controller
         $data['title'] = 'Admin';
         $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
 
+        $data['lomba'] = $this->db->get('tb_lomba')->num_rows();
+        $data['user_register'] = $this->db->get('tb_user')->num_rows();
+        $data['user_verify'] = $this->db->get_where('tb_user', ['is_uploader' => '1'])->num_rows();
+
         $this->load->view('templates/dashboard_header', $data);
         $this->load->view('templates/dashboard_sidebar', $data);
         $this->load->view('templates/dashboard_topbar', $data);

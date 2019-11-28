@@ -17,7 +17,7 @@
         ***********************************-->
 <div class="content-body">
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <?= form_open_multipart('lomba/edit_lomba/' . $lomba_user['id_lomba']) ?>
         <div class="row">
             <div class="col-lg-3 mt-4 ml-3">
