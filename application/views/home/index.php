@@ -22,20 +22,21 @@
 </ul>
 
 <div class="container-fluid ">
-    <div class="row content">
-        <div class="text-center">
-            <?php foreach ($lomba as $l) : ?>
-                <div class="card" style="width: 18rem;">
-                    <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>">
-                        <img src="<?= base_url() ?>/assets/img/lomba/<?= $l['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $l['judul_lomba'] ?></h5>
-                        <p class="card-text"><?= $l['deskripsi'] ?></p>
-                        <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>" class="btn btn-1">Detail lomba</a>
+    <div class="row">
+        <?php foreach ($lomba as $l) : ?>
+            <div class="col-sm col-md-3">
+                <div class="col-lg-9 col-md-12 col-sm-12 text-center">
+                    <div class="card-body" style="width: 18rem;">
+                        <a href="<?= base_url('home/detail/') ?><?= $l['id_lomba'] ?>">
+                            <img src="<?= base_url() ?>/assets/img/lomba/<?= $l['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $l['judul_lomba'] ?></h5>
+                            <p class="card-text"><?= $l['deskripsi'] ?></p>
+                        </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 </div>
