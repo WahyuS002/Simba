@@ -27,7 +27,7 @@
             <br>
             <div class="col-lg-5 col-md-12 text-center py-5 mb-1">
                 <br><br>
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <!-- <h4></h4> -->
                 <br><br>
             </div>
         </div>
@@ -65,17 +65,11 @@
 
             <div class="col-lg-5 col-md-12 my-5">
                 <div class="container grey1 p-5">
-                    <br><br>
-                    <h4>Kategori : </h4>
-                    <p><?= $kategori['kategori'] ?></p>
+                    <h4>Kategori <span class="badge badge-primary"> <?= $kategori_lomba['kategori'] ?></span></h4>
                     <br>
-                    <h4>Lorem. : </h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <h4>Hadiah <span class="badge badge-warning"><?= $lomba['hadiah'] ?></span> </h4>
                     <br>
-                    <h4>Lorem. : </h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <br><br><br><br>
-                    <a href="#" class="btn btn-block btn-3"> IKUT LOMBA </a>
+                    <a href="<?= $detail['url'] ?>" class="btn btn-block btn-3"> IKUT LOMBA </a>
                 </div>
             </div>
         </div>
@@ -83,20 +77,3 @@
 
 
     </article>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="container-fluid grey1 p-4">
-        <h4 class="d-inline-block"> lomba official website : </h4>
-        <div class="d-inline-block ml-auto">
-            <i class="fab fa-instagram "></i>
-            <i class="fab fa-instagram "></i>
-            <i class="fab fa-instagram "></i>
-            <i class="fab fa-instagram "></i>
-        </div>
-
-    </div>
-    <br>

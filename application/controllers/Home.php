@@ -86,10 +86,20 @@ class Home extends CI_Controller
         $data['kategori'] = $this->lomba->getKategori();
 
         $id_lomba = $this->uri->segment(3);
+
+        $data['kategori_lomba'] = $this->lomba->getKategoriId($id_lomba);
+
+        $data['lomba'] = $this->lomba->getLombaById($id_lomba);
+
         $data['detail'] = $this->detail->getDetailById($id_lomba);
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('detail/index', $data);
-        $this->load->view('templates/footer');
+        $cek_id_lomba = $this->db->get_where('tb_lomba', ['id_lomba' => $id_lomba])->row_array();
+        if ($cek_id_lomba == null) {
+            redirect('home');
+        } else {
+            $this->load->view('templates/header', $data);
+            $this->load->view('detail/index', $data);
+            $this->load->view('templates/footer');
+        }
     }
 }

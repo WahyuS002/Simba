@@ -17,4 +17,19 @@ class Home_model extends CI_Model
     {
         return $this->db->get_where('tb_lomba', ['id_kategori' => $id])->result_array();
     }
+
+    public function getKategoriId($id_kategori)
+    {
+        $query = "SELECT `tb_lomba`.`id_kategori`,`tb_kategori`.`kategori`
+                    FROM `tb_lomba` JOIN `tb_kategori`
+                      ON `tb_lomba`.`id_kategori` = `tb_kategori`.`id_kategori`
+                   WHERE `tb_lomba`.`id_lomba` = $id_kategori
+        ";
+        return $this->db->query($query)->row_array();
+    }
+
+    public function getLombaById($id_lomba)
+    {
+        return $this->db->get_where('tb_lomba', ['id_lomba' => $id_lomba])->row_array();
+    }
 }

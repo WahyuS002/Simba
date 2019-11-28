@@ -163,6 +163,9 @@ class Lomba extends CI_Controller
         $this->form_validation->set_rules('hadiah', 'Hadiah', 'required', [
             'required' => 'Isi nominal hadiah'
         ]);
+        $this->form_validation->set_rules('url', 'Url', 'required', [
+            'required' => 'Isi link pendaftaran'
+        ]);
 
         if ($this->form_validation->run()) {
             $upload_image = $_FILES['gambar']['name'];
@@ -187,6 +190,7 @@ class Lomba extends CI_Controller
                 'gambar' => $image,
                 'deskripsi' => htmlspecialchars($this->input->post('deskripsi', true)),
                 'hadiah' => htmlspecialchars($this->input->post('hadiah', true)),
+                'url' => htmlspecialchars($this->input->post('url', true)),
                 'id_user' => $user['id_user']
             ];
 
@@ -213,68 +217,74 @@ class Lomba extends CI_Controller
         $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
         $data['kategori'] = $this->db->get('tb_kategori')->result_array();
 
-        $this->load->model('Lomba_model', 'lomba');
+        $cek_id_lomba = $this->db->get_where('tb_lomba', ['id_lomba' => $id_lomba])->row_array();
 
-        $data['lomba_user'] = $this->lomba->getLombaById($id_lomba);
-
-        $this->form_validation->set_rules('judul', 'Judul', 'required|trim');
-        $this->form_validation->set_rules('kategori', 'Kategori', 'required|trim');
-        $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required|trim');
-        $this->form_validation->set_rules('hadiah', 'Hadiah', 'required|trim');
-
-        if ($this->form_validation->run() == false) {
-            $this->load->view('templates/dashboard_header', $data);
-            $this->load->view('templates/dashboard_sidebar', $data);
-            $this->load->view('templates/dashboard_topbar', $data);
-            $this->load->view('lomba/edit', $data);
-            $this->load->view('templates/dashboard_footer');
-        } else {
-            $judul = $this->input->post('judul');
-            $kategori = $this->input->post('kategori');
-            $deskripsi = $this->input->post('deskripsi');
-            $hadiah = $this->input->post('hadiah');
-
-            $id_lomba = $this->uri->segment(3);
-            // cek file upload
-            $upload_image = $_FILES['gambar']['name'];
-
-            if ($upload_image) {
-                $config['upload_path'] = './assets/img/profile/';
-                $config['max_size']     = '2048';
-                $config['allowed_types'] = 'gif|jpg|png';
-
-                $this->load->library('upload', $config);
-
-                if ($this->upload->do_upload('gambar')) {
-
-                    // cek image lama agar tidak terjadi duplikat image
-                    $old_image = $data['user']['gambar'];
-                    if ($old_image != 'default.jpg') {
-                        unlink('assets/img/profile/' . $old_image);
-                    }
-
-                    $new_image = $this->upload->data('file_name');
-                    $this->db->set('gambar', $new_image);
-                } else {
-                    $error = $this->upload->display_errors();
-                    $this->session->set_flashdata('error', '<div class="alert alert-danger" role="alert">
-                    ' . $error . '
-                    </div>');
-                    redirect('lomba');
-                }
-            }
-
-            $this->db->set('hadiah', $hadiah);
-            $this->db->set('deskripsi', $deskripsi);
-            $this->db->set('id_kategori', $kategori);
-            $this->db->set('judul_lomba', $judul);
-            $this->db->where('id_lomba', $id_lomba);
-            $this->db->update('tb_lomba');
-
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            Your Profile has been updated!
-            </div>');
+        if ($cek_id_lomba == null) {
             redirect('lomba');
+        } else {
+            $this->load->model('Lomba_model', 'lomba');
+
+            $data['lomba_user'] = $this->lomba->getLombaById($id_lomba);
+
+            $this->form_validation->set_rules('judul', 'Judul', 'required|trim');
+            $this->form_validation->set_rules('kategori', 'Kategori', 'required|trim');
+            $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required|trim');
+            $this->form_validation->set_rules('hadiah', 'Hadiah', 'required|trim');
+
+            if ($this->form_validation->run() == false) {
+                $this->load->view('templates/dashboard_header', $data);
+                $this->load->view('templates/dashboard_sidebar', $data);
+                $this->load->view('templates/dashboard_topbar', $data);
+                $this->load->view('lomba/edit', $data);
+                $this->load->view('templates/dashboard_footer');
+            } else {
+                $judul = $this->input->post('judul');
+                $kategori = $this->input->post('kategori');
+                $deskripsi = $this->input->post('deskripsi');
+                $hadiah = $this->input->post('hadiah');
+
+                $id_lomba = $this->uri->segment(3);
+                // cek file upload
+                $upload_image = $_FILES['gambar']['name'];
+
+                if ($upload_image) {
+                    $config['upload_path'] = './assets/img/profile/';
+                    $config['max_size']     = '2048';
+                    $config['allowed_types'] = 'gif|jpg|png';
+
+                    $this->load->library('upload', $config);
+
+                    if ($this->upload->do_upload('gambar')) {
+
+                        // cek image lama agar tidak terjadi duplikat image
+                        $old_image = $data['user']['gambar'];
+                        if ($old_image != 'default.jpg') {
+                            unlink('assets/img/profile/' . $old_image);
+                        }
+
+                        $new_image = $this->upload->data('file_name');
+                        $this->db->set('gambar', $new_image);
+                    } else {
+                        $error = $this->upload->display_errors();
+                        $this->session->set_flashdata('error', '<div class="alert alert-danger" role="alert">
+                        ' . $error . '
+                        </div>');
+                        redirect('lomba');
+                    }
+                }
+
+                $this->db->set('hadiah', $hadiah);
+                $this->db->set('deskripsi', $deskripsi);
+                $this->db->set('id_kategori', $kategori);
+                $this->db->set('judul_lomba', $judul);
+                $this->db->where('id_lomba', $id_lomba);
+                $this->db->update('tb_lomba');
+
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+                Your Profile has been updated!
+                </div>');
+                redirect('lomba');
+            }
         }
     }
 

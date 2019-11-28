@@ -56,7 +56,7 @@
                                     <?php else : ?>
                                         <a href="<?= base_url('admin/verification/') ?><?= $au['id_user'] ?>" class="badge badge-pill badge-warning">verifikasi</a>
                                     <?php endif; ?>
-                                    <a href="<?= base_url('admin/delete/') ?><?= $au['id_user'] ?>" class="badge badge-pill badge-danger" onclick="return confirm('yakin?')">Delete</a>
+                                    <a href="<?= base_url('admin/delete/') ?><?= $au['id_user'] ?>" class="badge badge-pill badge-danger" onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
                                 </td>
                             </tr>
                             <?php $i++ ?>

@@ -64,6 +64,10 @@
                     <input type="text" class="form-control" id="hadiah" name="hadiah" aria-describedby="emailHelp" placeholder="Hadiah" value="<?= set_value('hadiah') ?>">
                     <?= form_error('hadiah', '<small class="text-danger">', '</small>') ?>
                 </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="url" name="url" aria-describedby="emailHelp" placeholder="Link Pendaftaran" value="<?= set_value('url') ?>">
+                    <?= form_error('url', '<small class="text-danger">', '</small>') ?>
+                </div>
                 <button type="submit" class="btn btn-primary">Upload</button>
             </div>
         </div>

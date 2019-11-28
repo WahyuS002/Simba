@@ -62,7 +62,7 @@
                                     <p class="card-text"><?= $l['deskripsi'] ?></p>
                                 </div>
                                 <a href="<?= base_url('lomba/edit_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-success">Edit</span></a>
-                                <a href="<?= base_url('lomba/delete_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-danger" onclick="return confirm('Apakah anda yakin untuk delete lomba ini?')">Delete</span></a>
+                                <a href="<?= base_url('lomba/delete_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this contest?')">Delete</span></a>
                             </div>
                         </div>
                     </div>

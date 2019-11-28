@@ -15,9 +15,15 @@
 
 <ul class="nav justify-content-center text-center">
     <?php foreach ($kategori as $k) : ?>
-        <li class="nav-item">
-            <a class="nav-link active" href="<?= base_url('home/kategori_lomba/') ?><?= $k['id_kategori'] ?>"> <i class="<?= $k['icon'] ?>"></i><br> <?= $k['kategori'] ?> </a>
-        </li>
+        <?php if ($k['id_kategori'] == 1) : ?>
+            <li class="nav-item">
+                <a class="nav-link active" href="<?= base_url('home') ?>"> <i class="<?= $k['icon'] ?>"></i><br> <?= $k['kategori'] ?> </a>
+            </li>
+        <?php else : ?>
+            <li class="nav-item">
+                <a class="nav-link active" href="<?= base_url('home/kategori_lomba/') ?><?= $k['id_kategori'] ?>"> <i class="<?= $k['icon'] ?>"></i><br> <?= $k['kategori'] ?> </a>
+            </li>
+        <?php endif; ?>
     <?php endforeach; ?>
 </ul>
 
