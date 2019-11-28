@@ -68,7 +68,7 @@
                 </div>
                 <div class="row mt-4 float-right">
                     <a href="<?= base_url('admin/user_verification/') ?><?= $user['id_user']; ?>">
-                        <button class="btn btn-warning" type="submit" onclick="return confirm('Do you want verify this user?')">Konfirmasi</button>
+                        <button class="btn btn-warning" type="submit" onclick="return confirm('Apakah anda ingin menyetujui user ini untuk di verifikasi?')">Konfirmasi</button>
                     </a>
                 </div>
 

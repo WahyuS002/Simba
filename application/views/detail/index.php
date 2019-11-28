@@ -5,25 +5,11 @@
     <hr>
 
     <ul class="nav justify-content-center text-center">
-        <li class="nav-item">
-            <a class="nav-link active" href="index.html"> <i class="fas fa-book"></i><br> ALL </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="#"> <i class="fas fa-paint-brush"></i><br> DESIGN </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fas fa-code"></i> <br> PROGRAMMING </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fas fa-gamepad"></i> <br> GAMING </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fas fa-futbol"></i> <br> SPORT </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fas fa-pencil-ruler"></i> <br> ACADEMIC </a>
-        </li>
-
+        <?php foreach ($kategori as $k) : ?>
+            <li class="nav-item">
+                <a class="nav-link active" href="<?= base_url('home/kategori_lomba/') ?><?= $k['id_kategori'] ?>"> <i class="<?= $k['icon'] ?>"></i><br> <?= $k['kategori'] ?> </a>
+            </li>
+        <?php endforeach; ?>
     </ul>
     <hr class="mb-5">
 
@@ -35,21 +21,7 @@
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="<?= base_url('assets/img/lomba/') ?><?= $detail['gambar'] ?>" alt="First slide">
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/ex3.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/ex4.jpg" alt="Third slide">
-                        </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
             <br>
@@ -62,9 +34,7 @@
 
     </div>
 
-    <hr class="mt-5">
-
-    <div class="container">
+    <!-- <div class="container">
         <ul class="nav mx-5">
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -79,10 +49,10 @@
                 <a class="nav-link" href="#">Link</a>
             </li>
         </ul>
-    </div>
+    </div> -->
 
 
-    <hr>
+    <hr class="mt-5">
 
     <article class="container">
         <div class="row">
@@ -96,8 +66,8 @@
             <div class="col-lg-5 col-md-12 my-5">
                 <div class="container grey1 p-5">
                     <br><br>
-                    <h4>Lorem. : </h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <h4>Kategori : </h4>
+                    <p><?= $kategori['kategori'] ?></p>
                     <br>
                     <h4>Lorem. : </h4>
                     <p>Lorem ipsum dolor sit amet.</p>

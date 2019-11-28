@@ -17,4 +17,10 @@ class Lomba_model extends CI_Model
     {
         return $this->db->delete('tb_lomba', ['id_lomba' => $id_lomba]);
     }
+
+    public function get_lomba_list($limit, $start)
+    {
+        $query = $this->db->get('tb_lomba', $limit, $start);
+        return $query;
+    }
 }
