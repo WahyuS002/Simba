@@ -56,8 +56,11 @@
                     </select>
                     <?= form_error('kategori', '<small class="text-danger">', '</small>') ?>
                 </div>
+                <!-- <div class="form-group">
+                    <input type="text" class="form-control" id="deskripsi" name="deskripsi" aria-describedby="emailHelp" placeholder="Deskripsi">
+                </div> -->
                 <div class="form-group">
-                    <input type="text" class="form-control" id="deskripsi" name="deskripsi" aria-describedby="emailHelp" placeholder="Deskripsi" value="<?= set_value('deskripsi') ?>">
+                    <textarea class="form-control" id="deskripsi" name="deskripsi" rows="4" value="<?= set_value('deskripsi') ?>" placeholder="Deskripsi"></textarea>
                     <?= form_error('deskripsi', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">

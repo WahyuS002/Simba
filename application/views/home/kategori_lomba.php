@@ -51,7 +51,7 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"><?= $kl['judul_lomba'] ?></h5>
-                            <p class="card-text"><?= $kl['deskripsi'] ?></p>
+                            <p class="card-text text-truncate"><?= $kl['deskripsi'] ?></p>
                             <a href="<?= base_url('home/detail/') ?><?= $kl['id_lomba'] ?>" class="btn btn-1">Detail lomba</a>
                         </div>
                     </div>

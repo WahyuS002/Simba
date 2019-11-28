@@ -15,15 +15,9 @@
 
 <ul class="nav justify-content-center text-center">
     <?php foreach ($kategori as $k) : ?>
-        <?php if ($k['id_kategori'] == 1) : ?>
-            <li class="nav-item">
-                <a class="nav-link active" href="<?= base_url('home') ?>"> <i class="<?= $k['icon'] ?>"></i><br> <?= $k['kategori'] ?> </a>
-            </li>
-        <?php else : ?>
-            <li class="nav-item">
-                <a class="nav-link active" href="<?= base_url('home/kategori_lomba/') ?><?= $k['id_kategori'] ?>"> <i class="<?= $k['icon'] ?>"></i><br> <?= $k['kategori'] ?> </a>
-            </li>
-        <?php endif; ?>
+        <li class="nav-item">
+            <a class="nav-link active" href="<?= base_url('home/kategori_lomba/') ?><?= $k['id_kategori'] ?>"> <i class="<?= $k['icon'] ?>"></i><br> <?= $k['kategori'] ?> </a>
+        </li>
     <?php endforeach; ?>
 </ul>
 
@@ -38,7 +32,7 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"><?= $l->judul_lomba ?></h5>
-                            <p class="card-text"><?= $l->deskripsi ?></p>
+                            <p class="card-text text-truncate"><?= $l->deskripsi ?></p>
                         </div>
                     </div>
                 </div>

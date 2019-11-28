@@ -72,9 +72,19 @@ class Home extends CI_Controller
         $data['kategori'] = $this->lomba->getKategori();
         $data['katLomba'] = $this->lomba->getLombaByKategori($id);
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('home/kategori_lomba', $data);
-        $this->load->view('templates/footer');
+        $cek_kategori_id = $this->db->get_where('tb_kategori', ['id_kategori' => $id])->row_array();
+
+        if ($cek_kategori_id) {
+            if ($cek_kategori_id['id_kategori'] == 1) {
+                redirect('home');
+            } else {
+                $this->load->view('templates/header', $data);
+                $this->load->view('home/kategori_lomba', $data);
+                $this->load->view('templates/footer');
+            }
+        } else {
+            redirect('home');
+        }
     }
 
     public function detail($id_lomba)
