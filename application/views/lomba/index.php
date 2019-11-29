@@ -59,7 +59,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $l['judul_lomba'] ?></h5>
-                                    <p class="card-text"><?= $l['deskripsi'] ?></p>
+                                    <p class="card-text text-truncate"><?= $l['deskripsi'] ?></p>
                                 </div>
                                 <a href="<?= base_url('lomba/edit_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-success">Edit</span></a>
                                 <a href="<?= base_url('lomba/delete_lomba/') ?><?= $l['id_lomba'] ?>"><span class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this contest?')">Delete</span></a>
@@ -67,17 +67,17 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-            </div>
+                <!-- </div>
             <div class="row">
-                <div class="col">
-                    <!--Tampilkan pagination-->
-                    <?php echo $pagination; ?>
+                <div class="col"> -->
+                <!--Tampilkan pagination-->
+                <!-- <?php echo $pagination; ?>
                 </div>
+            </div> -->
+            <?php endif; ?>
             </div>
-        <?php endif; ?>
     </div>
-</div>
 
-<!--**********************************
+    <!--**********************************
             Content body end
         ***********************************-->

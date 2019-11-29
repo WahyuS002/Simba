@@ -19,6 +19,7 @@
                 <div class="form-input-content">
                     <div class="card login-form mb-0">
                         <div class="card-body pt-5">
+                            <a href="<?= base_url('home') ?>"><img src="<?= base_url('assets/img/home.png') ?>" alt="" style="width:30px"></a>
                             <a class="text-center" href="<?= base_url('auth') ?>">
                                 <h4>Login</h4>
                                 <?= $this->session->flashdata('message') ?>
