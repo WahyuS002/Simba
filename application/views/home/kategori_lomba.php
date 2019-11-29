@@ -22,41 +22,25 @@
 </ul>
 
 <div class="container-fluid ">
-    <div class="row content">
-        <!-- <div class="col-lg-3 px-5 sidebar">
-            <ul class="nav flex-column text-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Menu-1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu-2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu-3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu-4</a>
-                </li>
-            </ul>
-        </div> -->
-
-        <div class="col-lg-9 col-md-12 col-sm-12 text-center">
-            <?php foreach ($katLomba as $kl) : ?>
-                <?php if ($kl['id_lomba'] == 1) : ?>
-                    <?= redirect('home') ?>
-                <?php else : ?>
-                    <div class="card" style="width: 18rem;">
-                        <a href="<?= base_url('home/detail/') ?><?= $kl['id_lomba'] ?>">
-                            <img src="<?= base_url() ?>/assets/img/lomba/<?= $kl['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $kl['judul_lomba'] ?></h5>
-                            <p class="card-text text-truncate"><?= $kl['deskripsi'] ?></p>
-                            <a href="<?= base_url('home/detail/') ?><?= $kl['id_lomba'] ?>" class="btn btn-1">Detail lomba</a>
+    <div class="row">
+        <?php foreach ($katLomba as $kl) : ?>
+            <?php if ($kl['id_lomba'] == 1) : ?>
+                <?= redirect('home') ?>
+            <?php else : ?>
+                <div class="col-sm col-md-3">
+                    <div class="col-lg-9 col-md-12 col-sm-12 text-center">
+                        <div class="card-body" style="width: 18rem;">
+                            <a href="<?= base_url('home/detail/') ?><?= $kl['id_lomba'] ?>">
+                                <img src="<?= base_url() ?>/assets/img/lomba/<?= $kl['gambar'] ?>" class="card-img-top" alt="gambar2" style=" height:350px;">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $kl['judul_lomba'] ?></h5>
+                                <p class="card-text text-truncate"><?= $kl['deskripsi'] ?></p>
+                            </div>
                         </div>
                     </div>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </div>

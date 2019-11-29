@@ -23,4 +23,10 @@ class Lomba_model extends CI_Model
         $query = $this->db->get('tb_lomba', $limit, $start);
         return $query;
     }
+
+    public function get_lomba_kategori_list($id, $limit, $start)
+    {
+        $query = $this->db->get_where('tb_lomba', ['id_lomba' => $id], $limit, $start);
+        return $query;
+    }
 }

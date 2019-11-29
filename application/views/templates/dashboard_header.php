@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><?= $title ?></title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/vendor/quixlab/') ?>images/favicon.png">
     <!-- Pignose Calender -->
     <link href="<?= base_url('assets/vendor/quixlab/') ?>/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
     <!-- Chartist -->
